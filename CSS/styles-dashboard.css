@@ -1,0 +1,57 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#map {
+  background: white;
+  border-radius: 15px;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.green {
+  background-color: #28a745;
+}
+
+.yellow {
+  background-color: #ffc107;
+}
+
+.red {
+  background-color: #dc3545;
+}
+
+.light.active {
+  opacity: 1 !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.zone-info {
+  background: #e7f3ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007bff;
+}
