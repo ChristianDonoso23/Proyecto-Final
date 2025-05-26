@@ -12,6 +12,18 @@ h1 {
   background: white;
   border-radius: 15px;
 }
+.navbar {
+  background: linear-gradient(135deg, #5a60d1, #6844b3);
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffdd57 !important;
+}
 
 .light {
   width: 60px;

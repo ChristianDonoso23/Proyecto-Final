@@ -75,7 +75,11 @@ Object.entries(zones).forEach(([key, zone]) => {
   }).addTo(map);
 
   circle.bindTooltip(`${zone.name}: ${lastPM} µg/m³`);
-  circle.on('click', () => updateZone(key));
+  circle.on('click', () => {
+    zoneSelector.value = key;
+    updateZone(key);
+  });
+
 
   const opt = document.createElement('option');
   opt.value = key;
@@ -83,7 +87,19 @@ Object.entries(zones).forEach(([key, zone]) => {
   zoneSelector.appendChild(opt);
 });
 
-zoneSelector.addEventListener('change', e => updateZone(e.target.value));
+zoneSelector.addEventListener('change', e => {
+  const selectedZone = e.target.value;
+  if (selectedZone === "") {
+    map.setView([-0.22, -78.5], 12);
+    chart.data.datasets[0].data = [];
+    chart.update();
+    Object.values(semaforo).forEach(el => el.classList.remove('active'));
+    recoList.innerHTML = `<li>Selecciona un sector.</li>`;
+  } else {
+    updateZone(selectedZone);
+  }
+});
+
 
 function updateZone(zoneKey) {
   const zone = zones[zoneKey];
