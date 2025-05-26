@@ -45,35 +45,101 @@
             <a href="dashboard.html" class="btn btn-accion">Explorar Dashboard</a>
         </div>
     </section>
-
-    <!-- Sección Descripción del problema -->
-    <section class="info">
+    <!-- Sección de Cards Mejoradas -->
+    <section class="cards-section">
         <div class="container">
-            <h2 class="mb-4">Descripción del Problema</h2>
-            <p>La contaminación atmosférica en áreas urbanas es un problema crítico que afecta la salud pública y el
-                medio ambiente. Según la OMS, el 90% de la población mundial respira aire con niveles dañinos de
-                partículas contaminantes como <strong>PM2.5</strong> y <strong>PM10</strong>, lo que provoca
-                enfermedades respiratorias, cardiovasculares y muertes prematuras.</p>
-            <p>Sin embargo, muchos ciudadanos desconocen los niveles de contaminación en su localidad y cómo protegerse
-                adecuadamente.</p>
+            <div class="section-title">
+                <h2>Información Esencial</h2>
+                <p>Conoce la problemática y nuestro objetivo para combatir la contaminación urbana</p>
+            </div>
 
-            <p class="ms-4"><strong>[1] PM2.5:</strong> Son partículas con un diámetro igual o menor a 2.5 micrómetros
-                (µm), aproximadamente 30 veces más pequeñas que un cabello humano. Ejemplos: Humo de combustión,
-                emisiones de vehículos, partículas de metales pesados, hollín.</p>
+            <div class="row g-4">
+                <!-- Card Descripción del Problema -->
+                <div class="col-lg-6">
+                    <div class="card custom-card">
+                        <div class="card-header-custom">
+                            <i class="bi bi-exclamation-triangle-fill card-icon"></i>
+                            <h3 class="card-title">Descripción del Problema</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <div class="pollution-stats">
+                                <span class="stat-number">90%</span>
+                                <span class="stat-text">de la población mundial respira aire contaminado</span>
+                            </div>
 
-            <p class="ms-4"><strong>[2] PM10:</strong> Partículas con un diámetro igual o menor a 10 micrómetros (µm).
-                Ejemplos: Polvo de construcción, polen, esporas de hongos, cenizas volcánicas.</p>
-        </div>
-    </section>
+                            <p>La contaminación atmosférica en áreas urbanas es un problema crítico que afecta la salud
+                                pública y el medio ambiente. Según la OMS, provoca enfermedades respiratorias,
+                                cardiovasculares y muertes prematuras.</p>
 
+                            <div class="highlight-box">
+                                <p class="mb-0"><strong><i class="bi bi-info-circle me-2"></i>Problema
+                                        Principal:</strong> Muchos ciudadanos desconocen los niveles de contaminación en
+                                    su localidad y cómo protegerse adecuadamente.</p>
+                            </div>
 
-    <!-- Sección Objetivo -->
-    <section class="info bg-light">
-        <div class="container">
-            <h2 class="mb-4">Objetivo del Sitio Web</h2>
-            <p>Crear una plataforma estática que eduque a los ciudadanos sobre la contaminación del aire, muestre datos
-                simulados de calidad del aire en tiempo real mediante un dashboard interactivo, y brinde recomendaciones
-                prácticas para reducir la exposición y proteger la salud.</p>
+                            <div class="pm-info">
+                                <p class="mb-2"><strong><i class="bi bi-1-circle-fill me-2"></i>PM2.5:</strong>
+                                    Partículas ≤ 2.5 micrómetros. 30 veces más pequeñas que un cabello humano.</p>
+                                <small class="text-light">Ejemplos: Humo de combustión, emisiones vehiculares, metales
+                                    pesados, hollín.</small>
+                            </div>
+
+                            <div class="pm-info">
+                                <p class="mb-2"><strong><i class="bi bi-2-circle-fill me-2"></i>PM10:</strong>
+                                    Partículas ≤ 10 micrómetros.</p>
+                                <small class="text-light">Ejemplos: Polvo de construcción, polen, esporas, cenizas
+                                    volcánicas.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Objetivo -->
+                <div class="col-lg-6">
+                    <div class="card custom-card">
+                        <div class="card-header-custom objetivo">
+                            <i class="bi bi-bullseye card-icon"></i>
+                            <h3 class="card-title">Objetivo del Sitio Web</h3>
+                        </div>
+                        <div class="card-body-custom">
+                            <p>Crear una plataforma educativa integral que empodere a los ciudadanos con conocimiento y
+                                herramientas para enfrentar la contaminación del aire.</p>
+
+                            <div class="highlight-box objetivo">
+                                <h5><i class="bi bi-gear-fill me-2"></i>Funcionalidades Principales:</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Educación
+                                        sobre contaminación del aire</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Dashboard
+                                        interactivo con datos en tiempo real</li>
+                                    <li class="mb-2"><i
+                                            class="bi bi-check-circle-fill text-success me-2"></i>Recomendaciones
+                                        prácticas de protección</li>
+                                    <li class="mb-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Soluciones
+                                        para reducir la exposición</li>
+                                </ul>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-6 text-center">
+                                    <div class="info-card p-3 rounded">
+                                        <i class="bi bi-people-fill text-primary fs-2"></i>
+                                        <h6 class="mt-2 mb-0">Educación</h6>
+                                        <small class="text-light">Ciudadana</small>
+                                    </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div class="info-card p-3 rounded">
+                                        <i class="bi bi-shield-check text-success fs-2"></i>
+                                        <h6 class="mt-2 mb-0">Protección</h6>
+                                        <small class="text-light">de la Salud</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -1,18 +1,23 @@
 :root {
-  --color-accion: #5c6f7c; /* Azul grisáceo para botones y detalles */
-  --color-fondo: #f0f2f5; /* Gris claro para fondo general */
-  --color-oscuro: #343a40; /* Para navbar o textos destacados */
+  --color-accion: #5c6f7c;
+  --color-principal: #2c5aa0;
+  --color-secundario: #28a745;
+  --color-peligro: #dc3545;
+  --color-texto-principal: #f1f1f1;
+  --color-card-oscura: #2a2f3a;
+  --color-fondo: linear-gradient(135deg, #1c1f26 0%, #2c3e50 100%);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--color-fondo);
-  color: #222;
+  background: var(--color-fondo);
+  color: var(--color-texto-principal);
 }
 
 /* Navbar */
 .navbar {
-  background-color: var(--color-oscuro) !important;
+  background-color: #1a1d23 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand,
@@ -21,7 +26,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #6c9a8b !important; /* Valor directo en lugar de variable no usada */
+  color: #6c9a8b !important;
 }
 
 /* Hero */
@@ -61,39 +66,193 @@ body {
 .btn-accion {
   background-color: var(--color-accion);
   color: white;
-  padding: 10px 25px;
+  padding: 12px 30px;
   margin-top: 30px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-weight: 500;
+  transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(92, 111, 124, 0.3);
 }
 
 .btn-accion:hover {
   background-color: #3a4a57;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(92, 111, 124, 0.4);
 }
 
-/* Secciones */
-.info {
-  padding: 50px 20px;
-  background-color: white;
-  border-left: 5px solid var(--color-accion);
+/* Sección de Cards */
+.cards-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-principal), var(--color-secundario));
+  border-radius: 2px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cards personalizadas */
+.custom-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-card-oscura);
+  color: var(--color-texto-principal);
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-header-custom {
+  background: linear-gradient(135deg, var(--color-principal) 0%, #4a90e2 100%);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.card-header-custom.objetivo {
+  background: linear-gradient(135deg, var(--color-secundario) 0%, #20c997 100%);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-body-custom {
+  padding: 30px;
+}
+
+.card-body-custom p {
+  line-height: 1.7;
   margin-bottom: 20px;
+  color: #ddd;
+}
+
+.highlight-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--color-principal);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  color: #e0e0e0;
+}
+
+.highlight-box.objetivo {
+  border-left-color: var(--color-secundario);
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pollution-stats {
+  background: linear-gradient(135deg, #e53935 0%, #d81b60 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pollution-stats .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.pollution-stats .stat-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.pm-info {
+  background: rgba(33, 150, 243, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px 0;
+  border-left: 5px solid #2196f3;
+  color: #dcefff;
+}
+
+.pm-info strong {
+  color: #90caf9;
+  font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
-  background-color: #e9ecef;
-  padding: 20px;
+  background-color: #12161c;
+  padding: 40px 0 20px;
   margin-top: 40px;
-  color: #333;
+  color: #ccc;
 }
 
 footer a {
-  color: #333;
+  color: #ccc;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #6c9a8b; /* Valor directo */
+  color: #6c9a8b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .card-header-custom {
+    padding: 20px;
+  }
+
+  .card-body-custom {
+    padding: 20px;
+  }
+
+  .cards-section {
+    padding: 50px 0;
+  }
 }
