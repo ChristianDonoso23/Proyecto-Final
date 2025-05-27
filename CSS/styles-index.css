@@ -225,15 +225,15 @@ body {
 footer {
   background: linear-gradient(135deg, #1c1f26, #2c3e50);
   color: #ccc;
-  padding: 20px 0 10px 0; /* menos espacio arriba y abajo */
-  font-size: 0.85rem;      /* texto un poco más pequeño */
+  padding: 20px 0 10px 0;
+  font-size: 0.85rem;
   font-family: 'Roboto', sans-serif;
 }
 
 footer h5 {
   color: #fff;
   font-weight: 700;
-  margin-bottom: 15px;  /* menos margen debajo */
+  margin-bottom: 15px;
 }
 
 footer a {
@@ -250,8 +250,8 @@ footer ul {
   padding-left: 0;
   list-style: none;
   display: flex;
-  gap: 15px;            /* un poco menos de espacio entre íconos */
-  margin-bottom: 10px;   /* espacio abajo para separar del texto */
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 footer ul li i {
@@ -261,7 +261,7 @@ footer ul li i {
 
 footer p {
   color: #bbb;
-  margin-bottom: 5px;    /* menos espacio entre párrafos */
+  margin-bottom: 5px;
 }
 
 footer .text-center {

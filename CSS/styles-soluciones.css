@@ -173,9 +173,7 @@ footer ul {
   list-style: none;
   display: flex;
   gap: 15px;
-  /* un poco menos de espacio entre íconos */
   margin-bottom: 10px;
-  /* espacio abajo para separar del texto */
 }
 
 footer ul li i {
@@ -186,7 +184,6 @@ footer ul li i {
 footer p {
   color: #bbb;
   margin-bottom: 5px;
-  /* menos espacio entre párrafos */
 }
 
 footer .text-center {
